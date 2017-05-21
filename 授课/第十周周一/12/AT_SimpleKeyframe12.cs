@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AT_SimpleKeyframe12 : MonoBehaviour {
 
-	public int HP =1;
+	//public int HP =1;
 
-	public AnimationCurve _ScaleVSHP;
+	//public AnimationCurve _ScaleVSHP;
 
 	public AnimationCurve _X,_Y;
 
@@ -26,11 +26,11 @@ public class AT_SimpleKeyframe12 : MonoBehaviour {
 		float mx = (float)Input.mousePosition.x * 0.01f;
 
 		float y = _Y.Evaluate (t);
-		float x = _X.Evaluate (y);
+		float x = _X.Evaluate (t);
 		transform.localPosition = new Vector3 (x, y, 0);
 
-		float scl = _ScaleVSHP.Evaluate ((float)HP);
-		transform.localScale = new Vector3 (scl, scl, 1.0f);
+		//float scl = _ScaleVSHP.Evaluate ((float)HP);
+		//transform.localScale = new Vector3 (scl, scl, 1.0f);
 		
 	}
 }
